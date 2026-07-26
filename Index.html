@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Question Page -->
+    <div id="question-card" class="card">
+        <img id="cat-img" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW5pY29ybjE1/26fP3XA2h34v/giphy.gif" alt="cute cat">
+        <h2 id="question-text">Do you love me? ❤️</h2>
+        <div class="btn-container">
+            <button id="yes-btn" onclick="goToGifts()">YES</button>
+            <button id="no-btn" onclick="shrinkNoBtn()">NO</button>
+        </div>
+    </div>
+
+    <!-- Gift Selection Page (Hidden initially) -->
+    <div id="gift-card" class="card hidden">
+        <h2>I knew you'd say yes 💕</h2>
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW5pY29ybjE2/cute-cat-heart/giphy.gif" alt="heart cat" class="gift-cat">
+        
+        <div class="gifts-grid">
+            <button onclick="showModal('modal-photos')">🎁 GIFT 1</button>
+            <button onclick="showModal('modal-music')">🎁 GIFT 2</button>
+            <button onclick="showModal('modal-letter')">🎁 GIFT 3</button>
+        </div>
+    </div>
+
+    <!-- Modals for Gifts -->
+    <div id="modal-photos" class="modal hidden">
+        <div class="modal-content">
+            <h3>Captured Memories</h3>
+            <div class="photo-grid">
+                <img src="photo1.jpg" alt="Memory 1">
+                <img src="photo2.jpg" alt="Memory 2">
+            </div>
+            <button onclick="closeModals()">Close</button>
+        </div>
+    </div>
+
+    <div id="modal-music" class="modal hidden">
+        <div class="modal-content">
+            <h3>A song that reminds me of us 🎶</h3>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/BRUNO_MARS_TRACK_ID&color=%23ffb6c1">
+            </iframe>
+            <button onclick="closeModals()">Close</button>
+        </div>
+    </div>
+
+    <div id="modal-letter" class="modal hidden">
+        <div class="modal-content letter">
+            <h3>Dear Love,</h3>
+            <p>Write your romantic letter here...</p>
+            <button onclick="closeModals()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
